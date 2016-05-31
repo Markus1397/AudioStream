@@ -20,7 +20,7 @@ public class RTPServer implements ControllerListener, Runnable {
     
 
     public static void main() {
-        RTPServer rtp = new RTPServer("172.18.154.118", "Faded.mp3");
+        RTPServer rtp = new RTPServer("192.168.2.1", "Faded.mp3");
         Thread t = new Thread(rtp);
         t.start();
     }

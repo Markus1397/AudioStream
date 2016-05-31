@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="AudioStream_v_0.0.1_FrontEnd.jar" size="139138" download="eager" />
+    <jar href="AudioStream_v_0.0.1_FrontEnd.jar" size="139133" download="eager" />
     <jar href="lib\jmf.jar" size="1904171" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AudioStream_v_0.0.1_FrontEnd" >
