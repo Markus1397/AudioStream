@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08.03.2016, 10:04:45
+    Author     : Eva
+*/
+
+#aboutlabel {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+#aboutheader {
+    -fx-alignment: CENTER;
+}
+#updatebox {
+    -fx-alignment: CENTER;
+}
+#serverlabel {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+#servernamelabel {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#servername {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#servernamelabel2 {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#left {
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+}
+#settingsbutton {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+        -fx-padding: 5px;
+}
+#disconnect {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 5px;
+    
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AudioStream_v_0.0.1_Client.jnlp">
+  <information>
+    <title>AudioStream_v_0.0.1_Client</title>
+    <vendor>Eva</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AudioStream_v_0.0.1_Client.jar" size="16639" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AudioStream_v_0.0.1_Client" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="audiostream_v_0.pkg0.pkg1_client.AudioStream_v_001_Client"  name="AudioStream_v_0.0.1_Client" />
+  <update check="always"/>
+</jnlp>
