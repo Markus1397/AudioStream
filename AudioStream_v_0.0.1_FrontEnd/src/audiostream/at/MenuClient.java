@@ -8,7 +8,6 @@ package audiostream.at;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
-import javafx.scene.layout.BorderPane;
 
 /**
  *
@@ -56,7 +55,7 @@ public class MenuClient {
     }
 
     public MenuItem getPink() {
-        return pink;
+        return black;
     }
 
     public MenuItem getGrey() {
@@ -64,20 +63,35 @@ public class MenuClient {
     }
 
     public MenuItem getEnglisch() {
-        return englisch;
+        return english;
     }
 
     public MenuItem getDeutsch() {
-        return deutsch;
+        return german;
     }
     Menu language;
     MenuItem about;
     MenuItem update;
-    MenuItem pink;
+    MenuItem black;
     MenuItem grey;
-    MenuItem englisch;
-    MenuItem deutsch;
+    MenuItem english;
+    MenuItem german;
     Menu file;
+    Menu settings;
+
+    public MenuItem getBlack() {
+        return black;
+    }
+
+    public Menu getSettings() {
+        return settings;
+    }
+
+    public Menu getInfo() {
+        return info;
+    }
+    Menu info;
+    
 
     public Menu getFile() {
         return file;
@@ -85,8 +99,8 @@ public class MenuClient {
 
     public MenuClient() {
         file = new Menu("File");
-        Menu settings = new Menu("Settings");
-        Menu info = new Menu("Info");
+        settings = new Menu("Settings");
+        info = new Menu("Info");
         addMusic = new MenuItem("Add Music");
         quit = new MenuItem("Quit");
         preferences = new MenuItem("Preferences");
@@ -96,13 +110,13 @@ public class MenuClient {
         language = new Menu("Language");
         about = new MenuItem("About");
         update = new MenuItem("Update");
-        pink = new MenuItem("Pink");
+        black = new MenuItem("Black");
         grey = new MenuItem("Grey");
-        englisch = new MenuItem("Englisch");
-        deutsch = new MenuItem("Deutsch");
+        english = new MenuItem("English");
+        german = new MenuItem("German");
         header.backgroundProperty();
-        color.getItems().addAll(grey, pink);
-        language.getItems().addAll(englisch, deutsch);
+        color.getItems().addAll(grey, black);
+        language.getItems().addAll(english, german);
         header.getMenus().addAll(file, settings, info);
         file.getItems().addAll(addMusic, preferences, quit);
         settings.getItems().addAll(clients, color, language);

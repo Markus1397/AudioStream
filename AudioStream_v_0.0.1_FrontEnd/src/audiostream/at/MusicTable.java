@@ -20,12 +20,22 @@ public class MusicTable {
     public TableView getTable() {
         return musicTable;
     }
-    
+    TableColumn title;
+    TableColumn interprets;
+    TableColumn durations;
+
+    public TableColumn getTitle() {
+        return title;
+    }
+
+    public TableColumn getDurations() {
+        return durations;
+    }
     public MusicTable(ObservableList<Music> data) {
         musicTable = new TableView();
-        TableColumn title = new TableColumn("Title");
-        TableColumn interprets = new TableColumn("Interpret");
-        TableColumn durations = new TableColumn("Duration");
+        title = new TableColumn("Title");
+        interprets = new TableColumn("Interpret");
+        durations = new TableColumn("Duration");
         title.setPrefWidth(400);
         title.setCellValueFactory(new PropertyValueFactory<>("name"));
         interprets.setPrefWidth(200);

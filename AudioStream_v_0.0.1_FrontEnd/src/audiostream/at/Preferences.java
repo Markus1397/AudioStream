@@ -48,22 +48,41 @@ public class Preferences {
     public Scene getScene() {
         return preferencesScene;
     }
+
+    public Stage getPreferencesWindow() {
+        return preferencesWindow;
+    }
+
+    public Text getPreferencesText() {
+        return preferencesText;
+    }
+
+    public Label getPreferenceTitle() {
+        return preferenceTitle;
+    }
     Label preferencesDurationLabel;
     GridPane preferncesPane = new GridPane();
     Scene preferencesScene = new Scene(preferncesPane);
+    Text preferencesText;
+    Label preferenceTitle;
+    Label preferencesDuration;
+
+    public Label getPreferencesDuration() {
+        return preferencesDuration;
+    }
 
     public Preferences() {
         preferencesWindow.setTitle("Preferences");
         preferencesWindow.setWidth(250);
         preferencesWindow.setHeight(250);
-        Text preferencesText = new Text("Music Preferences");
+        preferencesText = new Text("Music Preferences");
         preferencesText.setId("preferencestext");
         preferncesPane.setAlignment(Pos.CENTER);
         preferncesPane.setHgap(10);
         preferncesPane.setVgap(10);
         preferncesPane.setPadding(new Insets(25, 25, 25, 25));
         preferncesPane.add(preferencesText, 0, 0, 2, 1);
-        Label preferenceTitle = new Label("Title: ");
+        preferenceTitle = new Label("Title: ");
         preferncesPane.add(preferenceTitle, 0, 1);
         Label artist = new Label("Artist: ");
         preferncesPane.add(artist, 0, 2);
@@ -71,7 +90,7 @@ public class Preferences {
         preferncesPane.add(album, 0, 3);
         Label genre = new Label("Genre: ");
         preferncesPane.add(genre, 0, 4);
-        Label preferencesDuration = new Label("Duration: ");
+        preferencesDuration = new Label("Duration: ");
         preferncesPane.add(preferencesDuration, 0, 5);
         preferencesTitleLabel = new Label("-");
         preferncesPane.add(preferencesTitleLabel, 1, 1);
