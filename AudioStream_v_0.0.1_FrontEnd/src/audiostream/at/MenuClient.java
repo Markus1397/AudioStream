@@ -54,9 +54,6 @@ public class MenuClient {
         return update;
     }
 
-    public MenuItem getPink() {
-        return black;
-    }
 
     public MenuItem getGrey() {
         return grey;

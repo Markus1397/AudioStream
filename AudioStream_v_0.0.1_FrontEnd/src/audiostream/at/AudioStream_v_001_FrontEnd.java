@@ -137,7 +137,7 @@ public class AudioStream_v_001_FrontEnd extends Application {
                 Platform.exit();
             }
         });
-        menu.getPink().setOnAction(new EventHandler<ActionEvent>() {
+        menu.getBlack().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 setUserAgentStylesheet(STYLESHEET_CASPIAN);

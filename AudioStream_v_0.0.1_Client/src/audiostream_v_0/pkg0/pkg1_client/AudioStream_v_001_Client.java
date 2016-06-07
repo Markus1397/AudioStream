@@ -23,7 +23,7 @@ public class AudioStream_v_001_Client extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        
+
         //Declarations
         BorderPane root = new BorderPane();
         Scene scene = new Scene(root, 500, 400);
@@ -72,6 +72,18 @@ public class AudioStream_v_001_Client extends Application {
             @Override
             public void handle(ActionEvent event) {
                 Platform.exit();
+            }
+        });
+        menuclient.getBlack().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                setUserAgentStylesheet(STYLESHEET_CASPIAN);
+            }
+        });
+        menuclient.getGrey().setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                setUserAgentStylesheet(STYLESHEET_MODENA);
             }
         });
 

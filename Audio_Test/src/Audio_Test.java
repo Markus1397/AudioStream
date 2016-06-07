@@ -26,7 +26,8 @@ public class Audio_Test {
         }
         
         else if(choice.equals("2")){
-            RTPClient.main(args);
+            String[] ip = {"rtp://192.168.2.1:8888"};
+            RTPClient.main(ip);
             
           
         

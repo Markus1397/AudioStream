@@ -14,7 +14,7 @@ public class RTPServer implements ControllerListener, Runnable {
     MediaLocator src;
 
     public static void main (String[] args) {
-        RTPServer rtp = new RTPServer("192.168.2.1", "07.mp3");
+        RTPServer rtp = new RTPServer("192.168.2.5", "07.mp3");
         Thread t = new Thread(rtp);
         t.start();
     }
