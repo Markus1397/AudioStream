@@ -68,14 +68,14 @@ public class MenuClient {
 
     public MenuClient() {
         settings = new Menu("Settings");
-         info = new Menu("Info");
-         file = new Menu("File");
-         color = new Menu("Color");
-         language = new Menu("Language");
-         grey = new MenuItem("Grey");
-         black = new MenuItem("Black");
-         german = new MenuItem("German");
-         english = new MenuItem("English");
+        info = new Menu("Info");
+        file = new Menu("File");
+        color = new Menu("Color");
+        language = new Menu("Language");
+        grey = new MenuItem("Grey");
+        black = new MenuItem("Black");
+        german = new MenuItem("German");
+        english = new MenuItem("English");
         menu.getMenus().addAll(file, settings, info);
         color.getItems().addAll(grey, black);
         language.getItems().addAll(german, english);

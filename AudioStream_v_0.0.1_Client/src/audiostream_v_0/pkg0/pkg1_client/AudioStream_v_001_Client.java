@@ -86,7 +86,22 @@ public class AudioStream_v_001_Client extends Application {
                 setUserAgentStylesheet(STYLESHEET_MODENA);
             }
         });
+        menuclient.getGerman().setOnAction(new EventHandler<ActionEvent>() {
 
+            @Override
+            public void handle(ActionEvent event) {
+                EnglishToGermanTranslator tran = new EnglishToGermanTranslator(menuclient, about, update, center, left, serverproperties);
+                tran.start();
+            }
+        });
+        menuclient.getEnglish().setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                GermanToEnglishTranslator tran = new GermanToEnglishTranslator(menuclient, about, update, center, left, serverproperties);
+                tran.start();
+            }
+        });
         //css
         about.getScene().getStylesheets().add(AudioStream_v_001_Client.class.getResource("Client.css").toExternalForm());
         update.getScene().getStylesheets().add(AudioStream_v_001_Client.class.getResource("Client.css").toExternalForm());

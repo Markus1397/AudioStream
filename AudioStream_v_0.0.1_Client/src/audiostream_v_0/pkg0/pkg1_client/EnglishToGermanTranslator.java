@@ -27,40 +27,36 @@ public class EnglishToGermanTranslator {
         update = u;
     }
     public void start() {
-        /*mclient.getFile().setText("Datei");
+        mclient.getFile().setText("Datei");
         mclient.getSettings().setText("Einstellungen");
         mclient.getInfo().setText("Information");
-        mclient.getAddMusic().setText("Musik hinzufügen");
         mclient.getQuit().setText("Beenden");
-        mclient.getPreferences().setText("Details");
-        mclient.getClients().setText("Klienten");
         mclient.getColor().setText("Farbe");
         mclient.getLanguage().setText("Sprache");
-        mclient.getAbout().setText("Über");
-        mclient.getUpdate().setText("Modernisieren");
+        mclient.getAboutMenuItem().setText("Über");
+        mclient.getUpdateMenuItem().setText("Modernisieren");
         mclient.getBlack().setText("Schwarz");
         mclient.getGrey().setText("Grau");
-        mclient.getEnglisch().setText("Englisch");
-        mclient.getDeutsch().setText("Deutsch");
+        mclient.getGerman().setText("Deutsch");
+        mclient.getEnglish().setText("Englisch");
+        mclient.getServer().setText("Server Eigenschaften");
+        
         
         about.getAboutWindow().setTitle("Über");
         about.getAbouttext().setText("Produzenten: Markus Kaufmann, Michael Dachs, Eva Pürmayr \nJahr: 2015/16 \nVersion: a0.0.1");
         
-        client.getClientsWindow().setTitle("Klienten");
-        client.getClientText().setText("Klienten");
-        client.getIp().setText("IP-Adresse");
-        client.getVerzoegerung().setText("Verzögerung");
-        client.getKick().setText("Kicken");
-        
-        table.getDurations().setText("Dauer");
-        table.getTitle().setText("Titel");
-        
-        pref.getPreferencesWindow().setTitle("Details");
-        pref.getPreferencesText().setText("Musik Details");
-        pref.getDurationLabel().setText("Dauer: ");
-        pref.getTitleLabel().setText("Titel: ");
-        
         update.getUpdateWindow().setTitle("Modernisierung");
-        update.getUpdateText().setText("Keine Modernisierungsmöglichkeiten verfügbar");*/
+        update.getUpdateText().setText("Keine Modernisierungsmöglichkeiten verfügbar");
+        
+        center.getVolumeLabel().setText("Lautstärke: ");
+        
+        left.getDisconnect().setText("Trennen");
+        left.getSettingsButton().setText("Einstellungen");
+        left.getServernameLabel().setText("Aktueller");
+        
+        prop.getServerWindow().setTitle("Server Eigenschaften");
+        prop.getIpLabel().setText("IP-Adresse");
+        prop.getDelayLabel().setText("Verzögerung:");
+        prop.getDisconnectServer().setText("Verbindung Trennen");
     }
 }

@@ -56,7 +56,7 @@ public class Center {
     public Label getVolumeValue() {
         return volumeValue;
     }
-    
+    Label volumeLabel;
     public Center(BorderPane root) {
         VBox center = new VBox();
         cover_image = new Image("file:music-cover.jpg", 150,150, false,false);
@@ -74,7 +74,7 @@ public class Center {
         song.setAlignment(Pos.CENTER);
         volume.setAlignment(Pos.CENTER);
         songName = new Label("<Songname>: ");
-        Label volumeLabel = new Label("Volume: ");
+       volumeLabel = new Label("Volume: ");
         songTime  = new Label("0:00");
         songTimeEnd = new Label("3:24");
         volumeValue = new Label();
@@ -91,5 +91,9 @@ public class Center {
         centerPane.add(volume, 1, 1);
         center.getChildren().addAll(cover, centerPane);
         root.setCenter(center);
+    }
+
+    public Label getVolumeLabel() {
+        return volumeLabel;
     }
 }
