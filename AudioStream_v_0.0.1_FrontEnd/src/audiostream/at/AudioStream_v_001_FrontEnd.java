@@ -159,7 +159,7 @@ public class AudioStream_v_001_FrontEnd extends Application {
             @Override
             public void handle(ActionEvent event) {
                 if (playCheck == false) {
-                    RTPServer.main();
+                    RTPServer.main("ip","path",00000);
                     bottom.getPlay().setGraphic(new ImageView(bottom.getPauseImage()));
                     playCheck = true;
                 } else {

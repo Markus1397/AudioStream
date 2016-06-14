@@ -16,16 +16,18 @@ public class RTPServer implements ControllerListener, Runnable {
     private String ipAddress;
     Processor p;
     MediaLocator src;
+    private final int PORT;
     
     
 
-    public static void main() {
-        RTPServer rtp = new RTPServer("172.18.154.118", "Faded.mp3");
+    public static void main(String ip, String path, int port) {
+        RTPServer rtp = new RTPServer(ip, path, port);
         Thread t = new Thread(rtp);
         t.start();
     }
 
-    public RTPServer(String ip, String song) {
+    public RTPServer(String ip, String song, int port) {
+        PORT = port;
         Format input1 = new AudioFormat(AudioFormat.MPEGLAYER3);
         Format input2 = new AudioFormat(AudioFormat.MPEG);
         Format output = new AudioFormat(AudioFormat.LINEAR);
@@ -94,7 +96,7 @@ public class RTPServer implements ControllerListener, Runnable {
             RTPManager rtpMgr = RTPManager.newInstance();
             SessionAddress localAddr, destAddr;
             SendStream sendStream;
-            int port = 42050;
+            int port = PORT;
             SourceDescription srcDesList[];
             localAddr = new SessionAddress(InetAddress.getLocalHost(), port);
             InetAddress ipAddr = InetAddress.getByName(ipAddress);
