@@ -94,7 +94,7 @@ public class AudioStream_v_001_FrontEnd extends Application {
                                 sec = "0" + seconds.toString();
                             }
                             String durationTemp = mins.toString() + ":" + sec;
-                            addMusic(name, artist, durationTemp, album, genre, image);
+                            addMusic(file.getPath(), name, artist, durationTemp, album, genre, image);
                         }
                     });
                 }
@@ -159,9 +159,13 @@ public class AudioStream_v_001_FrontEnd extends Application {
             @Override
             public void handle(ActionEvent event) {
                 if (playCheck == false) {
-                    RTPServer.main("ip","path",00000);
-                    bottom.getPlay().setGraphic(new ImageView(bottom.getPauseImage()));
-                    playCheck = true;
+                    Music m = (Music) musicTable.getTable().getSelectionModel().getSelectedItem();
+                    if (m != null) {
+                        System.out.println(m.getPath());
+                        RTPServer.main("ip", m.getPath(), 00000);
+                        bottom.getPlay().setGraphic(new ImageView(bottom.getPauseImage()));
+                        playCheck = true;
+                    }
                 } else {
                     bottom.getPlay().setGraphic(new ImageView(bottom.getPlayImage()));
                     playCheck = false;
@@ -172,18 +176,16 @@ public class AudioStream_v_001_FrontEnd extends Application {
             @Override
             public void handle(Event event) {
                 Music m;
-                for (int i = 0; i < data.size(); i++) {
-                    m = (Music) musicTable.getTable().getSelectionModel().getSelectedItem();
-                    if (m != null) { //check if somehinng is marked, continue
-                        menu.getPreferences().setDisable(false);
-                        preferences.getTitleLabel().setText(m.getName());
-                        preferences.getAlbumLabel().setText(m.getAlbum());
-                        preferences.getGenreLabel().setText(m.getGenre());
-                        preferences.getArtistLabel().setText(m.getInterpret());
-                        preferences.getDurationLabel().setText(m.getDuration());
-                    } else {
-                        menu.getPreferences().setDisable(true);
-                    }
+                m = (Music) musicTable.getTable().getSelectionModel().getSelectedItem();
+                if (m != null) { //check if somehinng is marked, continue
+                    menu.getPreferences().setDisable(false);
+                    preferences.getTitleLabel().setText(m.getName());
+                    preferences.getAlbumLabel().setText(m.getAlbum());
+                    preferences.getGenreLabel().setText(m.getGenre());
+                    preferences.getArtistLabel().setText(m.getInterpret());
+                    preferences.getDurationLabel().setText(m.getDuration());
+                } else {
+                    menu.getPreferences().setDisable(true);
                 }
             }
         });
@@ -194,7 +196,7 @@ public class AudioStream_v_001_FrontEnd extends Application {
                 EnglishToGermanTranslator tran = new EnglishToGermanTranslator(menu, about, client, musicTable, preferences, update);
                 tran.start();
             }
-            
+
         });
         menu.getEnglisch().setOnAction(new EventHandler<ActionEvent>() {
 
@@ -213,11 +215,11 @@ public class AudioStream_v_001_FrontEnd extends Application {
         client.getScene().getStylesheets().add(AudioStream_v_001_FrontEnd.class.getResource("server.css").toExternalForm());
         preferences.getScene().getStylesheets().add(AudioStream_v_001_FrontEnd.class.getResource("server.css").toExternalForm());
         primaryStage.show();
-        
+
     }
 
-    public void addMusic(String musicName, String interpret, String duration, String album, String genre, Image image) {
-        Music m = new Music(musicName, interpret, duration, album, genre, image);
+    public void addMusic(String path, String musicName, String interpret, String duration, String album, String genre, Image image) {
+        Music m = new Music(path, musicName, interpret, duration, album, genre, image);
         data.add(m);
     }
 
