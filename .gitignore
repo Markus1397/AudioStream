@@ -1,3 +1,3 @@
-/Audio_Test/dist/
-/AudioStream_v_0.0.1_Client/build/
-/AudioStream_v_0.0.1_Client/dist/
+/Audio_Test/dist/*
+/AudioStream_v_0.0.1_Client/build/*
+/AudioStream_v_0.0.1_Client/dist/*
