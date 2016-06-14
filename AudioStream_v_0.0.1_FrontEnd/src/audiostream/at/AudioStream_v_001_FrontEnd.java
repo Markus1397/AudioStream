@@ -137,10 +137,10 @@ public class AudioStream_v_001_FrontEnd extends Application {
                 Platform.exit();
             }
         });
-        menu.getPink().setOnAction(new EventHandler<ActionEvent>() {
+        menu.getBlack().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                setUserAgentStylesheet(STYLESHEET_CASPIAN); //black to pink
+                setUserAgentStylesheet(STYLESHEET_CASPIAN);
             }
         });
         menu.getGrey().setOnAction(new EventHandler<ActionEvent>() {
@@ -185,6 +185,23 @@ public class AudioStream_v_001_FrontEnd extends Application {
                         menu.getPreferences().setDisable(true);
                     }
                 }
+            }
+        });
+        menu.getDeutsch().setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                EnglishToGermanTranslator tran = new EnglishToGermanTranslator(menu, about, client, musicTable, preferences, update);
+                tran.start();
+            }
+            
+        });
+        menu.getEnglisch().setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                GermanToEnglishTranslator tran = new GermanToEnglishTranslator(menu, about, client, musicTable, preferences, update);
+                tran.start();
             }
         });
 

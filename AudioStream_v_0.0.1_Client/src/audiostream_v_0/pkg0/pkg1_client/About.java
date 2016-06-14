@@ -20,6 +20,8 @@ public class About {
     Stage aboutWindow = new Stage();
     BorderPane aboutpane = new BorderPane();
     Scene aboutscene = new Scene(aboutpane);
+    Label aboutLabel;
+    Label abouttext;
 
     public About() {
 
@@ -27,15 +29,27 @@ public class About {
         aboutWindow.setWidth(500);
         aboutWindow.setHeight(300);
         aboutpane.setId("aboutpane");
-        Label aboutLabel = new Label("Audio Stream");
+        aboutLabel = new Label("Audio Stream");
         aboutLabel.setId("aboutlabel");
-        Label abouttext = new Label("Producer: Markus Kaufmann, Michael Dachs, Eva Pürmayr \nYear: 2015/16 \nVersion: a0.0.1");
+        abouttext = new Label("Producer: Markus Kaufmann, Michael Dachs, Eva Pürmayr \nYear: 2015/16 \nVersion: a0.0.1");
         aboutpane.setCenter(abouttext);
         aboutWindow.setScene(aboutscene);
         HBox aboutheader = new HBox();
         aboutheader.setId("aboutheader");
         aboutpane.setTop(aboutheader);
         aboutheader.getChildren().add(aboutLabel);
+    }
+
+    public Stage getAboutWindow() {
+        return aboutWindow;
+    }
+
+    public Label getAboutLabel() {
+        return aboutLabel;
+    }
+
+    public Label getAbouttext() {
+        return abouttext;
     }
     public void show() {
         aboutWindow.show();

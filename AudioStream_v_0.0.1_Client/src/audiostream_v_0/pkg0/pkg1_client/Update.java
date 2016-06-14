@@ -21,12 +21,21 @@ public class Update {
     BorderPane updatePane = new BorderPane();
     Scene updateScene = new Scene(updatePane);
 
+    public Stage getUpdateWindow() {
+        return updateWindow;
+    }
+
+    public Label getUpdateText() {
+        return updateText;
+    }
+    Label updateText;
+
     public Update() {
 
         updateWindow.setTitle("Update");
         updateWindow.setWidth(500);
         updateWindow.setHeight(300);
-        Label updateText = new Label("No updates available");
+        updateText = new Label("No updates available");
         updateText.setId("updatetext");
         updateWindow.setScene(updateScene);
         HBox updateBox = new HBox();

@@ -18,14 +18,23 @@ import javafx.stage.Stage;
 public class Update {
 
     Stage updateWindow = new Stage();
+
+    public Stage getUpdateWindow() {
+        return updateWindow;
+    }
+
+    public Label getUpdateText() {
+        return updateText;
+    }
     BorderPane updatePane = new BorderPane();
     Scene updateScene = new Scene(updatePane);
+    Label updateText;
 
     public Update() {
         updateWindow.setTitle("Update");
         updateWindow.setWidth(500);
         updateWindow.setHeight(300);
-        Label updateText = new Label("No updates available");
+        updateText = new Label("No updates available");
         updateText.setId("updatetext");
         updateWindow.setScene(updateScene);
         HBox updateBox = new HBox();

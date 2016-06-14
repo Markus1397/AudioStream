@@ -20,8 +20,13 @@ public class RTPServer implements ControllerListener, Runnable {
     
     
 
+<<<<<<< HEAD
     public static void main(String ip, String path, int port) {
         RTPServer rtp = new RTPServer(ip, path, port);
+=======
+    public static void main() {
+        RTPServer rtp = new RTPServer("192.168.2.1", "Faded.mp3");
+>>>>>>> 9a8ffbbf2119af912b014ee40486eac6e3efc983
         Thread t = new Thread(rtp);
         t.start();
     }

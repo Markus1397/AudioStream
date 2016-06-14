@@ -20,19 +20,64 @@ public class MenuClient {
     MenuItem aboutMenuItem = new MenuItem("About");
     MenuItem updateMenuItem = new MenuItem("Update");
     MenuItem quit = new MenuItem("Quit");
+    Menu settings;
+    Menu info;
+    Menu file;
+    Menu color;
+    Menu language;
+
+    public Menu getSettings() {
+        return settings;
+    }
+
+    public Menu getInfo() {
+        return info;
+    }
+
+    public Menu getFile() {
+        return file;
+    }
+
+    public Menu getColor() {
+        return color;
+    }
+
+    public Menu getLanguage() {
+        return language;
+    }
+
+    public MenuItem getGrey() {
+        return grey;
+    }
+
+    public MenuItem getBlack() {
+        return black;
+    }
+
+    public MenuItem getGerman() {
+        return german;
+    }
+
+    public MenuItem getEnglish() {
+        return english;
+    }
+    MenuItem grey;
+    MenuItem black;
+    MenuItem german;
+    MenuItem english;
 
     public MenuClient() {
-        Menu settings = new Menu("Settings");
-        Menu info = new Menu("Info");
-        Menu file = new Menu("File");
-        Menu color = new Menu("Color");
-        Menu language = new Menu("Language");
-        MenuItem grey = new MenuItem("Grey");
-        MenuItem pink = new MenuItem("Pink");
-        MenuItem german = new MenuItem("German");
-        MenuItem english = new MenuItem("English");
+        settings = new Menu("Settings");
+        info = new Menu("Info");
+        file = new Menu("File");
+        color = new Menu("Color");
+        language = new Menu("Language");
+        grey = new MenuItem("Grey");
+        black = new MenuItem("Black");
+        german = new MenuItem("German");
+        english = new MenuItem("English");
         menu.getMenus().addAll(file, settings, info);
-        color.getItems().addAll(grey, pink);
+        color.getItems().addAll(grey, black);
         language.getItems().addAll(german, english);
         file.getItems().addAll(server, quit);
         settings.getItems().addAll(color, language);

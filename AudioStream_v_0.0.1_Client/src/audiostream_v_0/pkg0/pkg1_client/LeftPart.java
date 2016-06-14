@@ -34,13 +34,17 @@ public class LeftPart {
         this.serverName = serverName;
     }
 
+    public Label getServernameLabel() {
+        return servernameLabel;
+    }
+
     public Button getDisconnect() {
         return disconnect;
     }
-
+    Label servernameLabel;
     public LeftPart(BorderPane root) {
         VBox left = new VBox();
-        Label servernameLabel = new Label("Current");
+        servernameLabel = new Label("Current");
         Label servernameLabel2 = new Label("Server: ");
         Label nothing = new Label();
         left.getChildren().addAll(servernameLabel, servernameLabel2, serverName, settingsButton, nothing, disconnect);

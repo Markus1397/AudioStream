@@ -29,26 +29,30 @@ public class Client {
     }
     Scene clientScene = new Scene(clientPane);
     TableView clientTable = new TableView();
+    Label clientText;
+    TableColumn ip;
+    TableColumn verzoegerung;
+    Button kick;
 
     public Client() {
         clientsWindow.setTitle("Clients");
         clientsWindow.setWidth(300);
         clientsWindow.setHeight(400);
-        Label clientText = new Label("Clients");
+        clientText = new Label("Clients");
         clientText.setId("clienttext");
         clientsWindow.setScene(clientScene);
         HBox clientBox = new HBox();
         clientBox.setPadding(new Insets(10, 10, 10, 10));
         clientBox.setId("clientbox");
         clientBox.getChildren().add(clientText);
-        TableColumn ip = new TableColumn("IP-Adresse");
+        ip = new TableColumn("IP-Adress");
         TableColumn name = new TableColumn("Name");
-        TableColumn verzoegerung = new TableColumn("Verzögerung");
+        verzoegerung = new TableColumn("Latency");
         TableColumn check = new TableColumn("");
         clientTable.getColumns().addAll(ip, name, verzoegerung, check);
         clientPane.setCenter(clientTable);
         clientPane.setTop(clientBox);
-        Button kick = new Button("Kick");
+        kick = new Button("Kick");
         HBox clientBottom = new HBox();
         clientBottom.setPadding(new Insets(10, 10, 10, 10));
         clientBottom.getChildren().add(kick);
@@ -56,9 +60,27 @@ public class Client {
         clientPane.setBottom(clientBottom);
     }
 
-    public void setClientTable(TableView clientTable) {
-        this.clientTable = clientTable;
+    public Stage getClientsWindow() {
+        return clientsWindow;
     }
+
+    public Label getClientText() {
+        return clientText;
+    }
+
+    public TableColumn getIp() {
+        return ip;
+    }
+
+    public TableColumn getVerzoegerung() {
+        return verzoegerung;
+    }
+
+    public Button getKick() {
+        return kick;
+    }
+
+
     public void show() {
         clientsWindow.show();
     }
