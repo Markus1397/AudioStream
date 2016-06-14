@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Eva/Documents/AudioStream/AudioStream_v_0.0.1_Client/src/audiostream_v_0/pkg0/pkg1_client/EnglishToGermanTranslator.java</file>
+            <file>file:/C:/Users/Eva/Documents/AudioStream/AudioStream_v_0.0.1_Client/src/audiostream_v_0/pkg0/pkg1_client/AudioStream_v_001_Client.java</file>
+            <file>file:/C:/Users/Eva/Documents/AudioStream/AudioStream_v_0.0.1_Client/src/audiostream_v_0/pkg0/pkg1_client/MenuClient.java</file>
+            <file>file:/C:/Users/Eva/Documents/AudioStream/AudioStream_v_0.0.1_Client/src/audiostream_v_0/pkg0/pkg1_client/GermanToEnglishTranslator.java</file>
+        </group>
     </open-files>
 </project-private>
